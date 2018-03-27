@@ -1,12 +1,12 @@
 public class Product {
     private String name;
     private int shelflife; // in days
-    private double prive;
+    private double price;
 
-    public Product(String name, int shelflife, double prive) {
+    public Product(String name, int shelflife, double price) {
         this.name = name;
         this.shelflife = shelflife;
-        this.prive = prive;
+        this.price = price;
     }
 
     public String getName() {
@@ -25,11 +25,15 @@ public class Product {
         this.shelflife = shelflife;
     }
 
-    public double getPrive() {
-        return prive;
+    public double getPrice() {
+        return price;
     }
 
-    public void setPrive(double prive) {
-        this.prive = prive;
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public double getDecreasingAmountPerDay(){
+        return this.price/this.shelflife;
     }
 }
