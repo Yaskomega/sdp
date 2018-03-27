@@ -14,5 +14,13 @@ public class Main {
         products.add(new Product("Onions", 3*7, 1.92));
         products.add(new Product("Rice", 365, 5.60));
         Shop s = new Shop(products);
+
+        int number_of_days = Integer.parseInt(args[0]);
+
+        for (Product p : s.getProducts()) {
+            p.updatePrice(number_of_days);
+        }
+
+        System.out.println(s);
     }
 }

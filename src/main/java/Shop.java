@@ -14,4 +14,11 @@ public class Shop {
     public void setProducts(List<Product> products) {
         this.products = products;
     }
+
+    @Override
+    public String toString() {
+        return "Shop{" +
+                "products=" + products +
+                '}';
+    }
 }
